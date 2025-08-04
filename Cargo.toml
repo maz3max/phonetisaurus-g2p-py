@@ -1,0 +1,23 @@
+[package]
+name = "phonetisaurus-g2p-py"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "phonetisaurus_g2p_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+phonetisaurus-g2p = "0.1.1"
+clap = { version = "4", features = ["derive"] }
+rustfst = "1.2.6"
+anyhow = "1.0"
+pyo3 = { version = "0.22", features = ["extension-module"], optional = true }
+
+[features]
+default = ["python"]
+python = ["pyo3"]
+
+[[bin]]
+name = "phonetisaurus-g2p-py"
+path = "src/main.rs"
