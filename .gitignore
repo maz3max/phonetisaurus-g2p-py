@@ -3,3 +3,4 @@ models/nb_e_written.fst
 python/phonetisaurus_g2p_py/__pycache__/__init__.cpython-313.pyc
 python/phonetisaurus_g2p_py/*.so
 .DS_Store
+models/
